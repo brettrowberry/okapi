@@ -1,2 +1,2 @@
 # okapi
-Okapi is an add-on for Giraffe to make swagger docs easy
+Okapi makes adding Swagger docs to ASP.NET Core easy.
