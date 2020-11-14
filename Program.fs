@@ -9,6 +9,7 @@ let webApp =
     choose [
         route "/" >=> htmlFile "WebRoot/index.html"
         route "/swagger.yml" >=> htmlFile "WebRoot/swagger.yml"
+        route "/hello" >=> text "Hello!"
         ]
 
 let configureApp (app : IApplicationBuilder) =
