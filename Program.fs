@@ -8,7 +8,7 @@ open Giraffe
 let webApp =
     choose [
         route "/" >=> htmlFile "WebRoot/index.html"
-        route "/swagger.json" >=> htmlFile "WebRoot/swagger.json"
+        route "/swagger.yml" >=> htmlFile "WebRoot/swagger.yml"
         ]
 
 let configureApp (app : IApplicationBuilder) =
