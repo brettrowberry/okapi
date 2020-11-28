@@ -1,0 +1,31 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Okapi Sample API",
+    "description": "This is a sample server for a pet store.",
+    "version": "1.0.1"
+  },
+  "paths": {
+    "/hello": {
+      "get": {
+        "summary": "Says 'Hello!'",
+        "description": "Returns the string 'Hello.'",
+        "responses": {
+          "200": {
+            "description": "Successfully said hello",
+            "content": {
+              "application/text": {
+                "schema": {
+                  "type": "string",
+                  "example": {
+                    "body": "Hello!"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
