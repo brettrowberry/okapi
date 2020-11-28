@@ -48,3 +48,7 @@ let writeOpenApiJson (openApiDoc : OpenApiDoc) =
     System.IO.File.WriteAllText("./WebRoot/okapi.json", serialize openApiDoc, System.Text.Encoding.UTF8)
 
 writeOpenApiJson openApiDoc
+
+#load "../Types.fs"
+open Okapi
+let cat : Cat = { Name = "cat" }
