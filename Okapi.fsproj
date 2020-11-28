@@ -1,18 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <AssemblyName>Okapi.App</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="Types.fs" />
-    <Compile Include="Program.fs" />
-    <None Include="web.config" />
-    <Content Include="WebRoot/**/*">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Giraffe" Version="4.1.*" />
-    <PackageReference Include="TaskBuilder.fs" Version="2.1.*" />
-  </ItemGroup>
+
+   <PropertyGroup>
+     <TargetFramework>netcoreapp3.1</TargetFramework>
+     <AssemblyName>Okapi.App</AssemblyName>
+     <EnableDefaultContentItems>false</EnableDefaultContentItems>
+   </PropertyGroup>
+
+   <ItemGroup>
+     <PackageReference Include="Giraffe" Version="4.1.*" />
+     <PackageReference Include="TaskBuilder.fs" Version="2.1.*" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <Compile Include="Types.fs" />
+     <Compile Include="Program.fs" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <None Include="web.config" CopyToOutputDirectory="PreserveNewest" />
+     <Content Include="WebRoot\**\*">
+       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+     </Content>
+   </ItemGroup>
 </Project>
